@@ -9,7 +9,7 @@ import sqlite3
 import requests
 import webbrowser
 
-version_self = 1
+version_self = 2
 verbindung = sqlite3.connect("krankheiten.db")
 
 
@@ -53,11 +53,7 @@ class ki1_gui:
         def backitoff():
           MainGui.destroy()
           menue.create_Menue()
-        #canvas = Canvas(MainGui, width=1000, height=1000)
 
-        #image = PhotoImage(file="logomedbot.png")
-        #background_label = Label(MainGui, image=image)
-        #background_label.place(x=200, y=430)
         
 
 
@@ -289,9 +285,7 @@ def create():
   main = Tk()
   main.geometry('800x1000')
   main.configure(bg='mediumorchid')
- # picture = PhotoImage()
-#background_label = Label(main, image=picture)
- # background_label.place(x=0, y=0)
+
 
   connection = sqlite3.connect("erstehilfe.db")
   c = connection.cursor()
@@ -306,8 +300,7 @@ def create():
       global lists
       lists = daten
       return daten
-  #WORK NEEDS TO BE DONE: Split answer, 0 or 1?, split stichwörter with '/',  control if
-  #answer contains stichwörter
+
   def thinking():
       print('hier kommt die aktuelle liste am beginn von thinking')
       print(lists)
